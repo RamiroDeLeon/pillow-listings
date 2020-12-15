@@ -1,0 +1,13 @@
+user-admin
+BUbsZIQjkJDPKFqh
+
+mongodb+srv://user-admin:<password>@cmsc389j-f20-final.1lpsf.mongodb.net/<dbname>?retryWrites=true&w=majority
+
+
+client = pymongo.MongoClient("mongodb+srv://user-admin:<password>@cmsc389j-f20-final.1lpsf.mongodb.net/<dbname>?retryWrites=true&w=majority")
+db = client.test
+
+
+Database name = db-pf
+
+Using: git push origin main
