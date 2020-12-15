@@ -17,7 +17,6 @@ from datetime import datetime
 # local
 # from .client import MovieClient
 
-
 db = MongoEngine()
 login_manager = LoginManager()
 bcrypt = Bcrypt()
@@ -27,11 +26,8 @@ from .bpUser.routes import bpUser
 from .bpItem.routes import bpItem
 # from .routes import main
 
-
-
 def page_not_found(e):
     return render_template("404.html"), 404
-
 
 def create_app(test_config=None):
     app = Flask(__name__)
