@@ -1,0 +1,53 @@
+{% extends "header.html" %}
+{% block content %}
+    <br>
+        <br/>
+        <!-- Table with listed properties -->
+        <div class="card bg-dark" style="border-style: hidden; box-shadow: 0 30px 6px -6px">
+            
+            <div class="card-header" style="background: #548c60;">
+                <div>
+                    {# Profile picture #}
+                    <img class="comment-pic" src="data:image/png;base64,{{image}}" alt="image">
+                </div>
+                <div class="row">
+                    <div class="col" style="color: beige;">
+                        <h2> {{ username }}'s listings<small class="float-right">{{ itemLst.count() }} listing(s)</small></h2>
+                    </div>
+                </div>
+            </div>
+
+            <div class="card-body">
+                <table class="table table-striped table-dark table-hover rounded">
+                    <thead></thead>
+                    <tbody>
+                        {% for item in itemLst %}
+                            <tr class="media-list rounded">
+                                <th scope="row">${{ item.price }}.00 USD/month</th>
+                                <td>
+                                    <li class="media review-item">
+                                        <div class="media-body">
+                                            <strong>By: 
+                                                <a href="{{ url_for('bpItem.user_detail', username=item.poster.username) }}">
+                                                    @{{ item.poster.username }}
+                                                </a> // {{ item.propertyType }}
+                                            </strong>
+                                            <span class="float-right">
+                                                <small>{{ item.date }}</small>
+                                            </span>
+                                            <p>
+                                                {{ item.description }}
+                                            </p>
+                                        </div>
+                                    </li>
+                                </td>
+                            </tr>
+                        {% endfor %}
+                    </tbody>
+                </table>
+            </div>
+
+        </div>
+    </br>
+
+{% endblock %}

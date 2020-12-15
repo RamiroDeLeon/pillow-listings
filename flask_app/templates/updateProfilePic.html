@@ -1,0 +1,20 @@
+{% block content %}
+    <div class="card" style="box-shadow: 0 30px 6px -6px">
+        <div class="card-header" style="background: #548c60;  color: beige;">
+            <h5 >Update profile picture</h5>
+        </div>
+        <div class="card-body" style="background:beige;">
+            <form method="POST" enctype=multipart/form-data>
+                {{ updatePhotoForm.csrf_token }}
+                <div class="form-group">
+                    {{ updatePhotoForm.photo.label }}
+                    {{ updatePhotoForm.photo(class='form-control') }}
+                    <br/>
+                    {{ updatePhotoForm.submit(class="button") }}
+                </div>
+            </form>
+        </div>
+    </div>
+
+
+{% endblock %}

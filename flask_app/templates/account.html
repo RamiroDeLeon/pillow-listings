@@ -1,0 +1,36 @@
+{% extends "header.html" %}
+{% block content %}
+    <br/><br/>
+    <div class="card bg-dark" style="padding: 30px; box-shadow: 0 30px 6px -6px">
+        <div>
+            <div>
+                {# Profile picture #}
+                <img class="comment-pic" src="data:image/png;base64,{{image}}" alt="image">
+            </div>
+            <div>
+                <h1 style="color:whitesmoke;">Hey, {{ current_user.username }}!
+                    
+                </h1>
+                <h5 class="float-right">
+                    <a href="{{ url_for('bpItem.user_detail', username=current_user.username) }}">
+                        Click here to see all of your posts and comments!
+                    </a>
+                </h5>
+            </div>
+            
+            <br>
+                <br/>
+                <!-- NEXT LINE GOES TO HTML TEMPLATE W/ UPDATE-USERNAME FORM -->        
+                {% include "updateUsername.html" %}
+                <br/><br/>
+                <!-- NEXT LINE GOES TO HTML TEMPLATE W/ UPDATE-PROFILE-PIC FORM -->
+                {% include "updateProfilePic.html" %}  
+                <br/><br/>
+                <!-- NEXT LINE GOES TO HTML TEMPLATE W/ POST-ITEM FORM -->
+                {% include "postItem.html" %} 
+            </br>
+
+        </div>
+    </div>
+    <br/><br/>    
+{% endblock %}

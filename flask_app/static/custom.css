@@ -1,0 +1,70 @@
+movie {
+    max-width: 80;
+    padding: 1; 
+}
+
+.card-body > img {
+    max-width: 200;
+}
+
+.media-list {
+    border-top: 1px dashed rgb(150, 150, 150);
+}
+
+.review-item {
+    border-bottom: 1px dashed #a5a5a5;
+}
+
+.propic {
+    max-width: 50%;
+}
+
+.comment-pic {
+    max-width: 64px;
+}
+
+.token {
+    max-width: 800;
+    word-wrap: break-word;
+}
+
+
+
+
+
+/* NEW STUFF*/
+.checkbox-menu li label {
+    display: block;
+    padding: 3px 10px;
+    clear: both;
+    font-weight: normal;
+    line-height: 1.42857143;
+    color: #333;
+    white-space: nowrap;
+    margin:0;
+    transition: background-color .4s ease;
+}
+.checkbox-menu li input {
+    margin: 0px 5px;
+    top: 2px;
+    position: relative;
+}
+
+.checkbox-menu li.active label {
+    background-color: #cbcbff;
+    font-weight:bold;
+}
+
+.checkbox-menu li label:hover,
+.checkbox-menu li label:focus {
+    background-color: #f5f5f5;
+}
+
+.checkbox-menu li.active label:hover,
+.checkbox-menu li.active label:focus {
+    background-color: #b8b8ff;
+}
+
+.theme > div {
+    background-color: teal;
+}

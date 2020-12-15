@@ -1,0 +1,46 @@
+{% block content %}
+<div class="card" style="box-shadow: 0 30px 6px -6px">
+    <div class="card-header" style="background: #548c60;  color: beige;">
+        <h5 >Post your listing</h5>
+    </div>
+    <div class="card-body" style="background: beige;">
+        <div class="form-group container-fluid justify-content-center">
+            <form action="" role="form" method="POST" >
+                {{ postItemForm.csrf_token }}
+                <div class="row">
+                    <div class="col">
+                        {{ postItemForm.price.label }}
+                        {{ postItemForm.price(class="form-control", placeholder="Enter amount") }}
+                    </div>
+                    <div class="col">
+                        {{ postItemForm.rooms.label }}
+                        {{ postItemForm.rooms(class="form-control")}}
+                    </div>
+                    <div class="col">
+                        {{ postItemForm.restrooms.label }}
+                        {{ postItemForm.restrooms(class="form-control")}}
+                    </div>
+                    <div class="col">
+                        {{ postItemForm.propertyType.label }}
+                        {{ postItemForm.propertyType(class="form-control")}}
+                    </div>
+                </div>
+                <br/>
+                <div class="row">
+                    {{ postItemForm.description.label }}
+                    {{ postItemForm.description(class="form-control", rows="3")}}
+                </div>
+                <br/>
+                <div class="row">
+                    {{ postItemForm.submit }}
+                </div>
+            </form>
+        </div>
+
+
+    </div>
+</div>
+
+
+    
+{% endblock %}
